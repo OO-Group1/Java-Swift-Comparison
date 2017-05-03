@@ -7,6 +7,10 @@ Comparing the languages features of Java and Swift including code examples.
 - David Schneider, djs6g7, 12380240
 - Trenton Thompson, tstwxc, 16107209
 
+# Table of Contents
+
+* [Classes](#classes)
+
 # Introduction
 
 ## Language Purpose / Genesis
