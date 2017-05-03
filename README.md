@@ -9,20 +9,20 @@ Comparing the languages features of Java and Swift including code examples.
 
 # Table of Contents
 
-#### [Introduction](#introduction)
+[**Introduction**](#introduction)
   * [Language Purpose / Genesis](#language-purpose--genesis)
   * [Procedural / Function Programming](#procedural--functional-programming)
   * [Unique features](#unique-features)
   * [Namespaces](#namespaces)
 
-#### [General](#general)
+[**General**](#general)
   * [Types](#types)
   * [References vs values](#references-vs-values)
   * [Null/nil references](#nullnil-references)
   * [Errors and exception handling](#errors-and-exception-handling)
   * [Lambda expressions, closures, functions as types](#lambda-expressions-closures-functions-as-types)
 
-#### [Classes](#classes)
+[**Classes**](#classes)
   * [General](#general-1)
   * [Instance reference](#instance-reference)
   * [Properties]()
@@ -30,7 +30,7 @@ Comparing the languages features of Java and Swift including code examples.
   * [Inheritance / Extension](#inheritance--extension)
   * [Reflection](#reflection)
 
-#### [Other](#other)
+[**Other**](#other)
   * [Listeners and event handlers](#listeners-and-event-handlers)
   * [Singletons](#singletons)
   * [Multithreading](#multithreading)
