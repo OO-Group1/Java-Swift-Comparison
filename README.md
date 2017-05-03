@@ -9,29 +9,32 @@ Comparing the languages features of Java and Swift including code examples.
 
 # Table of Contents
 
-* [Introduction](#introduction)
+#### [Introduction](#introduction)
   * [Language Purpose / Genesis](#language-purpose--genesis)
-  * [Procedural programming](#procedural-programming)
-  * [Functional programming](#functional-programming)
+  * [Procedural / Function Programming](#procedural--functional-programming)
   * [Unique features](#unique-features)
   * [Namespaces](#namespaces)
 
-* [General](#general)
+#### [General](#general)
   * [Types](#types)
   * [References vs values](#references-vs-values)
-  * [Null/nil references]()
-  * [Errors and exception handling]()
-  * [Lambda expressions, closures, functions as types]()
-  * [Classes]()
-  * [Instance reference (this or self)]()
-  * [Properties (getters/setters)]()
-  * [Interfaces / protocols]()
-  * [Inheritance / extension]()
-  * [Reflection]()
-  * [Listeners and event handlers]()
-  * [Singletons]()
-  * [Multithreading]()
-  * [Memory management]()
+  * [Null/nil references](#nullnil-references)
+  * [Errors and exception handling](#errors-and-exception-handling)
+  * [Lambda expressions, closures, functions as types](#lambda-expressions-closures-functions-as-types)
+
+#### [Classes](#classes)
+  * [General](#general-1)
+  * [Instance reference](#instance-reference)
+  * [Properties]()
+  * [Interfaces / Protocols](#interfaces--protocols)
+  * [Inheritance / Extension](#inheritance--extension)
+  * [Reflection](#reflection)
+
+#### [Other](#other)
+  * [Listeners and event handlers](#listeners-and-event-handlers)
+  * [Singletons](#singletons)
+  * [Multithreading](#multithreading)
+  * [Memory management](#memory-management)
 
 # Introduction
 
@@ -39,7 +42,7 @@ Comparing the languages features of Java and Swift including code examples.
 
 Jacob
 
-## Procedural / Functional
+## Procedural / Functional Programming
 
 David
 
@@ -88,19 +91,19 @@ Trenton
 
 David
 
-## Instance reference (this or self)
+## Instance reference
 
 Trenton
 
-## Properties (getters/setters)
+## Properties
 
 David
 
-## Interfaces / protocols
+## Interfaces / Protocols
 
 David
 
-## Inheritance / extension
+## Inheritance / Extension
 
 Trenton
 
