@@ -25,7 +25,7 @@ Comparing the languages features of Java and Swift including code examples.
 [**Classes**](#classes)
   * [General](#general-1)
   * [Instance reference](#instance-reference)
-  * [Properties]()
+  * [Properties](#properties)
   * [Interfaces / Protocols](#interfaces--protocols)
   * [Inheritance / Extension](#inheritance--extension)
   * [Reflection](#reflection)
