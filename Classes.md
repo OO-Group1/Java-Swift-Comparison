@@ -15,9 +15,8 @@ public class Pet{
 }
 ```
 
-* Classes do not rewuire a constructor, however, one is recommended to more precicely control how a class behaves.
-
-* Constructors must be either public or protected. 
+* Classes do not require a constructor, however, one is recommended to more precicely control how a class behaves.
+    * Constructors must be either public or protected. 
     
 ```java
 public class Pet{
