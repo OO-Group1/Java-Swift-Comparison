@@ -2,7 +2,7 @@
 
 ## Defining a class
 
-*Classes are defined using the “Class” Keyword, and are private, protected, or public. Each class must be defined in its own file. 
+* Classes are defined using the “Class” Keyword, and are private, protected, or public. Each class must be defined in its own file. 
     
 ```java
 public class Pet{
@@ -15,9 +15,9 @@ public class Pet{
 }
 ```
 
-*Classes do not rewuire a constructor, however, one is recommended to more precicely control how a class behaves.
+* Classes do not rewuire a constructor, however, one is recommended to more precicely control how a class behaves.
 
-*Constructors must be either public or protected. 
+* Constructors must be either public or protected. 
     
 ```java
 public class Pet{
@@ -37,7 +37,7 @@ public class Pet{
 }
 ```
 
-*Classes may also have multiple constructors, as long as each one has a unique signiture. This allows for different use cases of the class to be instantiated in different ways.
+* Classes may also have multiple constructors, as long as each one has a unique signiture. This allows for different use cases of the class to be instantiated in different ways.
 
 ```java
 public class Pet{
