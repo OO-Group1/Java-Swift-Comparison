@@ -90,6 +90,8 @@ Trenton
 ## General
 
 David
+[General Compairson of Classes in Java and Swift](Classes.md)
+
 
 ## Instance reference
 
