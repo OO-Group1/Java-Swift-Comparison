@@ -4,12 +4,12 @@
 
 Classes are defined using the “Class” Keyword, and are private, protected, or public
     
-    ```java
-    public static void main() {
-        //This is a class in java
-    
-    }
-    ```
+```java
+public static void main() {
+    //This is a class in java
+
+}
+```
 
 Must be own file
 Can be Abstract
