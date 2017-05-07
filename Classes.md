@@ -1,8 +1,11 @@
 # Java Vs Swift Class Compairison
 
+# Java
+
 ## Defining a class
 
-* Classes are defined using the “Class” Keyword, and are private, protected, or public. Each class must be defined in its own file. 
+* Classes are defined using the “Class” Keyword, and are private, protected, or public. 
+    * Each class must be defined in its own file. 
     
 ```java
 public class Pet{
@@ -14,6 +17,8 @@ public class Pet{
 
 }
 ```
+
+## Constructors
 
 * Classes do not require a constructor, however, one is recommended to more precicely control how a class behaves.
     * Constructors must be either public or protected. 
@@ -29,14 +34,16 @@ public class Pet{
     public Pet(String name, String type, int age) {
         this.name = name;
         this.type = type;
-        thid.age = age;
+        this.age = age;
 
     }
+    
 
 }
 ```
 
 * Classes may also have multiple constructors, as long as each one has a unique signiture. This allows for different use cases of the class to be instantiated in different ways.
+    * This is common practice when a class might have a very common initial condition, for example, the 1-year-old dog shown below
 
 ```java
 public class Pet{
@@ -61,6 +68,12 @@ public class Pet{
 
 }
 ```
+## ABstraction
+
+* Abstraction is supported in Java. This is to say that a class can be created with
+
+
+## Garbage Collection
 
 
 Must be own file
