@@ -40,7 +40,17 @@ Comparing the languages features of Java and Swift including code examples.
 
 ## Language Purpose / Genesis
 
-Jacob
+### Java
+
+Java was created by James Gosling, Mike Sheridan and Patrick Naughton at Sun Microsystems starting in 1991 and was released publicly in 1995. Interestingly, Java was originally intended to be used for "interactive television", but this did not come to fruition because of limitations in the cable industry. 
+
+Java's primary selling point was the slogan "Write Once, Run Anywhere". This was considered a big plus compared to its main competitiors, C and C++, which much be compiled for the end-user's specific machine which could lead to headaches. Unlike C/C++, Java runs on top of a virtual machine which interfaces with the machine. So long as the Java Virtual Machine (JVM) can run on a machine, so too can a Java program, and without the need for compilation.
+
+Java was also a little higher-level than its competitors, featuring built in managed memory, more security features and better file I/O.
+
+### Swift
+
+
 
 ## Procedural / Functional Programming
 
