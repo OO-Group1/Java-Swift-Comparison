@@ -74,13 +74,114 @@ public class myTV implements Television {
 
 }
 ```
+* It is worth noting that Java only supports multiple inheritance with Interfaces only, as it only supports multiple inheritance of type. 
+* Implementing multiple interfaces would look something like this,
+
+```java
+public class myNewTV implements Television, HDTV { 
+    // Define an HD TV here 
+}
+```
 
 
 ## Swift Protocols
 
+* A Protocol in Swift is very similar to an Interface in Java in that they set certain method signitures for methods that must be implemented, but they also may define properties, and other requirements that an implementing member must fully implement.
+
+* Protocols are defined using the "protocol" keyword, for example 
+
+```swift
+protocol Television {
+    // protocol goes here
+}
+```
+
+### Properties
+
+* Protocols may define property names and corrosponding types, and whether or not getters or setters are required
+    * Properties defined without a requirement for a getter or setter may be implemented as either a stored property or a computed propety.
+    * Required properties must always be declared as variables with the "var" keyword
+    * Type properties must also use the static prefix
+    
+```swift
+protocol Television {
+
+    var currentChannel: Int { get set }
+    var currentVolume: Int { get set }
+    var powerState: bool { get set }
+    
+    //Methods go here
+
+}
+```
+### Methods
+
+* Methods are defined in much the same way as in Java.
+* Type methods must be prefixed with the "static" keyword
+
+```swift
+protocol Television {
+
+    var currentChannel: Int { get set }
+    var currentVolume: Int { get set }
+    var powerState: bool { get set }
+    
+    func increaseChannel(currentChannel: Int) -> Int 
+    
+    func decreaseChannel(currentChannel: Int) -> Int
+    
+    func increaseVol(currentVolume: Int) -> Int
+    
+    func decreaseVol(currentVolume: Int) -> Int
+
+    func togglePower(powerState: bool) -> bool
+}
+```
+
+### Implementation
+
+* Unlike Java there is no keyword to use when defining an object (class, struct, etc.) which might implement the protocol. Instead a colon is put at the end of the name of the object, followed by the name of the protocol.
+* Classes and other objects may confrom to multiple protocols in the same way Java classes may implement multiple interfaces.
 
 
 
+```swift
+class myTV: Television {
+    
+    var currentChannel: Int { get set }
+    var currentVolume: Int { get set }
+    var powerState: bool { get set }
+    
+    func increaseChannel(currentChannel: Int) -> Int  {
+        return currentChannel + 1
+    }
+    
+    func decreaseChannel(currentChannel: Int) -> Int  {
+        return currentChannel - 1
+    }
+    
+    func increaseVol(currentVolume: Int) -> Int  {
+        return currentVolume + 1
+    }
+    
+    func decreaseVol(currentVolume: Int) -> Int {
+        return currentVolume - 1
+    }
+
+    func togglePower(powerState: bool) -> bool {
+        if(powerState)
+        {
+            return !powerState
+        }
+        else
+        {
+            return !powerstate
+        }
+    }
+
+
+}
+```
 
 
 
