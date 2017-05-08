@@ -101,6 +101,8 @@ Trenton
 ## Properties
 
 David
+[Properties](properties.md)
+
 
 ## Interfaces / Protocols
 
