@@ -1,9 +1,9 @@
 # Class Compairison
 
 * [Defining a class](#defining-a-class)
-* [Constructing/initializing](#constructing/initializing)
+* [Constructing / initializing](#constructing/initializing)
 * [Instantiation](#instantiation)
-* [Deconstructing/de-initializing](#deconstructing/de-initializing)
+* [Deconstructing / de-initializing](#deconstructing/de-initializing)
 
 ## Defining a class
 
@@ -136,5 +136,5 @@ Pet puppy = new Pet(Scout) // Using the constructor which assigns a name to a 1 
 ### Swift
 
 
-
+[Back to home Table of Contents](README.md)
 
