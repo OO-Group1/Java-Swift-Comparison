@@ -44,7 +44,10 @@ Jacob
 
 ## Procedural / Functional Programming
 
-David
+* Java is an etirely Object Oriented language and does not support procedural programming
+
+* Swift does support procedural programming, however it is not recommended. 
+    * Swift is first and foremost an Object Oriented language.
 
 ## Unique Features
 
