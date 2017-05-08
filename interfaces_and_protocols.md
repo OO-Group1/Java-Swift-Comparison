@@ -142,6 +142,7 @@ protocol Television {
 
 * Unlike Java there is no keyword to use when defining an object (class, struct, etc.) which might implement the protocol. Instead a colon is put at the end of the name of the object, followed by the name of the protocol.
 * Classes and other objects may confrom to multiple protocols in the same way Java classes may implement multiple interfaces.
+   
 
 
 
@@ -182,7 +183,10 @@ class myTV: Television {
 
 }
 ```
-
+ * Multiple protocols in Swift are seperated by commas, like this,
+ ```swift
+class myTV: Television, HDTV { //myTV code}
+ ```
 
 
 [Back to Table of Contents](README.md)
