@@ -32,7 +32,7 @@ Comparing the languages features of Java and Swift including code examples.
 
 [**Other**](#other)
   * [Listeners and event handlers](#listeners-and-event-handlers)
-  * [Singletons](#singletons)
+  * [Singletons](singleton.md)
   * [Multithreading](#multithreading)
   * [Memory management](#memory-management)
 
