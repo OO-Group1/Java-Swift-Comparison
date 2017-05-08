@@ -23,10 +23,10 @@ Comparing the languages features of Java and Swift including code examples.
   * [Lambda expressions, closures, functions as types](#lambda-expressions-closures-functions-as-types)
 
 [**Classes**](#classes)
-  * [General](#general-1)
+  * [General](classes.md)
   * [Instance reference](#instance-reference)
   * [Properties](#properties)
-  * [Interfaces / Protocols](#interfaces--protocols)
+  * [Interfaces and Protocols](interfaces_and_protocols.md)
   * [Inheritance / Extension](#inheritance--extension)
   * [Reflection](#reflection)
 
