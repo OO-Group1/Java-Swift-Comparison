@@ -1,9 +1,9 @@
 # General Class Compairison
 
 * [Defining a class](#defining-a-class)
-* [Constructing / initializing](#constructing/initializing)
+* [Constructing / initializing](#constructing--initializing)
 * [Instantiation](#instantiation)
-* [Deconstructing / de-initializing](#deconstructing/de-initializing)
+* [Deconstructing / de-initializing](#deconstructing--de-initializing)
 
 ## Defining a class
 
