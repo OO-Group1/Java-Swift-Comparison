@@ -189,5 +189,5 @@ let myPuppy = Pet(puppy: Scout)
 
 
 
- [Back to home Table of Contents](README.md)
+ [Back to Table of Contents](README.md)
 
