@@ -1,9 +1,9 @@
 # Class Compairison
 
 * [Defining a class](#defining-a-class)
-* [Constructing and initializing](#constructing--initializing)
+* [Constructing/initializing](#constructing/initializing)
 * [Instantiation](#instantiation)
-* [Deconstructing/de-initializing](#deconstructing--de-initializing)
+* [Deconstructing/de-initializing](#deconstructing/de-initializing)
 
 ## Defining a class
 
@@ -129,7 +129,7 @@ Pet puppy = new Pet(Scout) // Using the constructor which assigns a name to a 1 
 
 
 
-## Deconstructing and 
+## Deconstructing/de-initializing
 
 ### Java
 
