@@ -1,4 +1,4 @@
-# Class Compairison
+# General Class Compairison
 
 * [Defining a class](#defining-a-class)
 * [Constructing / initializing](#constructing/initializing)
@@ -49,7 +49,7 @@ class Pet {
 
 ### Java
 
-* Classes do not require a constructor, however, one is recommended to more precicely control how a class behaves.
+* Classes do not require a constructor, all classes inherit an empty constructor, which will create an instance of the class, but does not set any attribute values. For this reason it is highly recommended to write a constructor to go with each class.
     * Constructors must have the same name as the class. 
     * Constructors must be either public or protected. 
     
@@ -101,6 +101,39 @@ public class Pet{
 
 ### Swift
 
+* Rather than using the name of the class as its constructor method, Swift uses the "init()" method.
+* Swift provides a default initializer if no "init()" method is defined, but default values of properties are. 
+    * When called it assigns the default values defined in the class to its attributes.
+* One class may define multple init methods to account for different use cases. 
+
+```swift
+
+class Pet {
+    
+    var name
+    var type
+    var age 
+
+    init(name: String, type: String, age: int) {
+    
+        self.name = name
+        self.type = type
+        self.age = age
+    
+    }
+    
+    init(puppy name: String) {
+    
+        self.name = name
+        self.type = "Dog"
+        self.age = 1
+    
+    }
+
+
+
+}
+```
 
 ## Instantiation
 
@@ -124,17 +157,37 @@ Pet puppy = new Pet(Scout) // Using the constructor which assigns a name to a 1 
 ```
 ### Swift
 
+* New instances of Swift classes do not require any special keyword. 
+    * They are treated like any other variable.
+    * It is good practice to instantiate them using the let keyword, which defines the class as a constant value.
+    
+```swift
+// some code here
 
+let myPet = Pet(Charlie, dog, 2)
 
+let myPuppy = Pet(puppy: Scout)
 
+//More code...
 
+```
 
 ## Deconstructing/de-initializing
 
 ### Java
+    
+* Java is a garbage collecting language and therefore does not require users to do any deconstruction.
+    * All classes inherit the "finalize()" method, which should be used as a programmer's last resort to release resources
+    * "finalize()" is only called at the discretion of the garbage collector at runtime.
+
 
 ### Swift
 
+* Swift uses automatic reference counting or ARC and deallocates resources once there are no more references to that resource.
+    * Programmers are not required to do any extra programming to deallocate resources. 
+    * The best practice is to make sure reference variables are set to nil once they are no longer needed so that the ARC garbage collection can function properly and not allow the program to hog resources
 
-[Back to home Table of Contents](README.md)
+
+
+ [Back to home Table of Contents](README.md)
 
