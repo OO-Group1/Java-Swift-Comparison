@@ -3,7 +3,7 @@
 * [Defining a class](#defining-a-class)
 * [Constructing / initializing](#constructing--initializing)
 * [Instantiation](#instantiation)
-* [Deconstructing / de-initializing](#deconstructing--de-initializing)
+* [Garbage Collection](#garbage-collection)
 
 ## Defining a class
 
@@ -45,7 +45,7 @@ class Pet {
 ```
 
 
-## Constructing / Initiailizing
+## Constructing / Initializing
 
 ### Java
 
@@ -172,7 +172,7 @@ let myPuppy = Pet(puppy: Scout)
 
 ```
 
-## Deconstructing/de-initializing
+## Garbage Collection
 
 ### Java
     
