@@ -69,13 +69,81 @@ Group
 
 ## Namespaces
 
-* Java uses the concept of *packages*. Packages are named collections of classes that are grouped together. Every Java program starts with a base package name which is prefixed to all class definitions. The names of subpackages, classes and their inner classes are appended to give the full class namespace. Package names usually correspond to folders where the class files are stored, although it is more complex than that.
+### Java 
+
+Java uses the concept of *packages*. Packages are named collections of classes that are grouped together. Every Java program starts with a base package name which is prefixed to all class definitions. The names of subpackages, classes and their inner classes are appended to give the full class namespace. Package names usually correspond to folders where the class files are stored, although it is more complex than that.
 
 Ex) The `String` class lives in the `java.lang` package as a fundamental part of the Java programming language. The "simple name" is `String`, while its namespace, "unique name" or "fully qualified name" is `java.lang.String`.
 
-Multiple classes of the same name can exist so long as they do not reside in the same package.
+Multiple classes of the same name can exist so long as they do not reside in the same package. For any class, it's package can be defined like so:
 
-* Swift
+```
+package com.oo_design;
+```
+
+To use a class you must import its package or the class itself. By defining a class as part of a package, you implicitly include all the classes that are also in that package.
+
+```
+import java.io.*;       //All classes in java.io package
+import java.io.File;    //File class from java.io package
+```
+
+Modern IDEs should automatically add the imports for you on the fly if they are unambiguous. If there are multiple classes with the same name, they may ask you which to import. You can also use a namespace directly in the Java code to resolve conflicts. 
+
+Ex) If I have already imported java.io.File, I must either remove that import line and replace it with mine to just reference `File` in code, or do it like this:
+
+```
+com.oo_design.File file = new File("my_file.txt");
+```
+
+### Swift
+
+In Swift, each file or class you create, unless otherwise specified, is available throughout your entire application without the need for importing. Code that comes from other sources is based on a concept called "modules". A module can be either a framework or an application and is considered to be "a single unit of code distribution." To use code from another module, one must use the `import` keyword, which is used to import code from an entire module. Ex)
+
+```
+import Alamofire
+```
+
+
+\^Note: Alamofire is a popular networking framework for iOS.
+
+Given this there has been much debate over how to best make global constants. Since there are no namespaces in the usual sense within a module, a constant in one place could conflict with a constant in another if named the same. One such way is to leverage Swift's power of extension with enumerations:
+
+```
+enum Login { }
+
+extension Login {
+  struct Data {
+    let username: String
+    let password: String
+  }
+}
+```
+
+For implementations related to login, we can do:
+
+```
+extension Login {
+  class LoginViewController {
+    //Do stuff
+  }
+}
+```
+
+In here, we can refer to `Login.Data` as simply `Data` since `LoginViewController` is and extension of `Login`. Elsewhere, we would refer to it as `Login.Data` still, which gives us some kind of concept of a namespace.
+
+For constants, others have use uninitializable structs to provide something of a namespace:
+
+```
+struct Colors {
+  private init() {}
+
+  static let Red = UIColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 1.0)
+}
+```
+
+Users of this struct can then refer to `Red` globally by `Colors.Red`, rather than thinking up some unique variable name that won't cause problems now or in the future, which is how Swift works by default.
+
 
 
 
