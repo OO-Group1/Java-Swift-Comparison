@@ -18,9 +18,9 @@
 ```java
 public class Pet {
 
-    String name;
-    String type;
-    int age;
+    private String name;
+    private String type;
+    private int age;
     //This is a class in java
 
 }
@@ -56,9 +56,9 @@ class Pet {
 ```java
 public class Pet{
 
-    String name;
-    String type;
-    int age;
+    private String name;
+    private String type;
+    private int age;
     
     
     public Pet(String name, String type, int age) {
@@ -78,9 +78,9 @@ public class Pet{
 ```java
 public class Pet{
 
-    String name;
-    String type;
-    int age;
+    private String name;
+    private String type;
+    private int age;
     
     
     public Pet(String name, String type, int age) {
