@@ -69,8 +69,13 @@ Group
 
 ## Namespaces
 
-Jacob
+* Java uses the concept of *packages*. Packages are named collections of classes that are grouped together. Every Java program starts with a base package name which is prefixed to all class definitions. The names of subpackages, classes and their inner classes are appended to give the full class namespace. Package names usually correspond to folders where the class files are stored, although it is more complex than that.
 
+Ex) The `String` class lives in the `java.lang` package as a fundamental part of the Java programming language. The "simple name" is `String`, while its namespace, "unique name" or "fully qualified name" is `java.lang.String`.
+
+Multiple classes of the same name can exist so long as they do not reside in the same package.
+
+* Swift
 
 
 
