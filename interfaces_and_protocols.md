@@ -185,7 +185,9 @@ class myTV: Television {
 ```
  * Multiple protocols in Swift are seperated by commas, like this,
  ```swift
-class myTV: Television, HDTV { //myTV code}
+class myTV: Television, HDTV { 
+    //myTV code
+}
  ```
 
 
