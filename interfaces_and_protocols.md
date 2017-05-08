@@ -29,7 +29,9 @@ public interface Television {
 
 }
 ```
-* This Interface would then be implemented in the definition of a class, something like this.
+* Note how the method signitures are ended with a semicolon, not brackets.
+
+* This Interface would then be implemented in the definition of a class, something like this,
 
 ```java
 
@@ -42,20 +44,36 @@ public class myTV implements Television {
     
     // some getters and setters
     
-    int increaseChannel(int currentChannel);
+    int increaseChannel(int currentChannel){
+        return currentChannel++;
+    }
     
-    int decreaseChannel(int currentChannel);
+    int decreaseChannel(int currentChannel){
+        return currentChannel-1;
+    }
     
-    int increaseVol(int currentVolume);
+    int increaseVol(int currentVolume){
+        return currentVolume++;
+    }
     
-    int decreaseVol(int currentVolume);
+    int decreaseVol(int currentVolume){
+        return currentVolume-1;
+    }
     
-    boolean togglePower(boolean powerState);
+    boolean togglePower(boolean powerState){
+        if(powerState)
+        {
+            return !powerState;
+        }
+        else
+        {
+            return !powerstate;
+        }
+    }
 
 
 }
-
-
+```
 
 
 ## Swift Protocols
