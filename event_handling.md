@@ -30,7 +30,7 @@ public class someClass {
 
 ## Swift
 
-* 
+* Native solutions for event handling do not exist in Swift. Workarounds have to be implemented.
 
 ```Swift
 
