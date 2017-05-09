@@ -24,7 +24,7 @@ Comparing the languages features of Java and Swift including code examples.
 
 [**Classes**](#classes)
   * [General](#general-1)
-  * [Instance reference](#instance-reference)
+
   * [Properties](#properties)
   * [Interfaces and Protocols](#interfaces-and-protocols)
   * [Inheritance / Extension](#inheritance--extension)
@@ -196,9 +196,6 @@ Users of this struct can then refer to `Red` globally by `Colors.Red`, rather th
 
 [General Compairson of Classes in Java and Swift](Classes.md)
 
-## Instance reference
-
-Trenton
 
 ## Properties
 
