@@ -5,7 +5,27 @@
 
 ## Java Data Types
 
-* stuff
+* Java supports primitive data types such as int, float, booleans, and characters
+* Reference types are instantiable classes as well as arrays, such as String, int[], String[], etc.
+* The double equals sign, ==, is used to compare contents of variables. Primitive values are compared, while addresses are compared for references.
+* Primitive values are returned as the value itself, while returned references give the address.
+
+```Java
+
+private class myClass {
+	private int num;//primitive data type
+	private String name;//reference type
+	
+	int getNumber() {
+		return num;//returns the current value in num
+	}
+	
+	String getName() {
+		return name;//returns the address of the variable name, and NOT a copy of the contents
+	}
+}
+
+```
 
 ## Swift Data Types
 

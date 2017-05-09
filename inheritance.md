@@ -2,6 +2,7 @@
 
 ## Java
 
+* Classes in Java support Inheritance. 
 
 ## Swift
 
