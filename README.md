@@ -152,7 +152,10 @@ Users of this struct can then refer to `Red` globally by `Colors.Red`, rather th
 
 ## Types
 
-Trenton
+[Types](types.md)
+
+* [Java](types.md#java-data-types)
+* [Swift](types.md#swift-data-types)
 
 ## References vs values
 
@@ -171,9 +174,10 @@ Since a class can be used almost exactly like either of these types, Apple advis
 
 ## Null/nil references
 
-* Java uses null  
-* Swift uses nil
+[Null or nil?](null_nil.md)
 
+* [Java](null_nil.md#Java-Null/Nil-references) 
+* [Swift](null_nil.md#Swift-Null/Nil-references)
 
 ## Errors and exception handling
 
@@ -278,7 +282,7 @@ y.blah()
 
 ## Lambda expressions, closures, functions as types
 
-Trenton
+[Lambda Expressions / Closures](lambda.md)
 
 
 
@@ -311,7 +315,7 @@ Trenton
 
 ## Inheritance / Extension
 
-Trenton
+[Inheritance / Extension](inheritance.md)
 
 ## Reflection
 
