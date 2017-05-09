@@ -230,7 +230,7 @@ Jacob
 
 ## Listeners and event handlers
 
-Trenton
+[Listeners and event handlers](event_handling.md)
 
 ## Singletons
 
