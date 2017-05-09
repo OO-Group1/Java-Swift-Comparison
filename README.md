@@ -218,7 +218,7 @@ Trenton
 
 ## Inheritance / Extension
 
-Trenton
+[Inheritance / Extension](inheritance.md)
 
 ## Reflection
 
