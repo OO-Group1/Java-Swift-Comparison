@@ -22,7 +22,8 @@ public class myClass {
 
 ```Swift
 
-
+var str: String? = nil
+s === nil // true
 
 ```
 
