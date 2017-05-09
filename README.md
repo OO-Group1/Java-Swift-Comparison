@@ -205,8 +205,9 @@ Trenton
 ## Interfaces / Protocols
 
 [Interfaces and Protocols](interfaces_and_protocols.md)
-    * [Java](interfaces_and_protocols.md#java-interfaces)
-    * [Swift](interfaces_and_protocols.md#swift-protocols)
+
+* [Java](interfaces_and_protocols.md#java-interfaces)
+* [Swift](interfaces_and_protocols.md#swift-protocols)
 
 ## Inheritance / Extension
 
@@ -228,8 +229,9 @@ Trenton
 ## Singletons
 
 [Singletons](singleton.md)
-    * [Java](singleton.md#java)
-    * [Swift](singleton.md#swift)
+
+* [Java](singleton.md#java)
+* [Swift](singleton.md#swift)
     
 ## Multithreading
 
