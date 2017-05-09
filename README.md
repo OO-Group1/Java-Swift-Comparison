@@ -402,6 +402,18 @@ class Main {
 
 ### Swift
 
+Swift has a very different implentation of multithreading compared to Java. It relies on what is called a "Grand Central Dispacth" which is in charge of thread lifecycle (e.g. creating and starting threads). One must only call `dispatch_async()` with some queue and closure where the thread will run. Getting the queue to dispatch to is as easy as calling another method. To get the global queue (not main thread), call `dispatch_get_global_queue(priority, flags)`. To get the main queue, call `dispatch_get_main_queue()`. Ex)
+
+```swift
+dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
+	//Do async things on thread
+
+	dispatch_async(dispatch_get_main_queue(), {
+		//Handle result on main thread
+	}
+}
+```
+
 ## Memory management
 
 Trenton
