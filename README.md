@@ -67,6 +67,10 @@ Swift incorporates what many Apple developers felt were the best features of a w
 
 * Swift does not require semicolons at the end of lines.
 * Swift has a "lazy" keyword, to denote objects that should be lazily instantiated
+* Swift has first class characters for unwrapping Optionals:
+
+  * `!`: used when certain the data will be there or to force it.
+  * `?`: used when uncertain the data will be there, continues in code if wrapped data is nill.
 
 ## Namespaces
 
