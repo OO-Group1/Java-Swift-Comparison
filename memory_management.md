@@ -37,6 +37,7 @@ public class Cat {
 * Allocation and deallocation of memory is done on the behalf of the user using Automatic Reference Counting (ARC).
 * Since trying to access an instance that no longer exists would crash the program, ARC will only deallocate an instance if there are exactly zero active references to an instance that still exist.
 * In the example below, the reference variable will ensure that the new Cat isn't deallocated.
+* Constructors and destructors can be written into a class in Swift to specify how an object is built or destroyed.
 
 ```Swift
 
