@@ -7,10 +7,28 @@
 * New objects are put into the new group just like how a single heap adds new objects to itself, except that unused objects are moved to the old group instead.
 * The old group functions like the original heap mentioned here; when it becomes full, the unused objects are deleted.
 * These things are handled for the user.
+* Users may specify a constructor, but they cannot write a destructor in Java.
 
 ```Java
 
-
+public class Cat {
+	private double age;
+	private String name;
+	
+	//constructor
+	public Cat() {
+		age = 0.0;
+		name = "Cat";
+	}
+	
+	//another constructor
+	public Cat(double age, String name) {
+		this.age = age;
+		this.name = name;
+	}
+	
+	//no syntax for destructor in Java
+}
 
 ```
 
