@@ -339,7 +339,68 @@ Trenton
     
 ## Multithreading
 
-Jacob
+### Java
+
+Platforms based on Java may have different, higher level implementations for Threads, but at the most basic level Threads in Java are based off the `Thread` class. One must either:
+
+1. Make a subclass of `Thread` and override the `run()` method, then instantiate the subclass and call `start()` on it OR
+
+2. Make a subclass of `Runnable` and override its `run()` method, then pass this to the default `Thread` constructor and call `start()` on it.
+
+The main difference between the two is that `Thread` is a class and has access to state data about the thread, while `Runnable` is an interface making the `Thread` state data essentially private.
+
+```java
+//MyThread.java
+class MyThread extends Thread {
+
+  public MyThread() {}
+
+  public void run() {
+    //Do things on thread
+  }
+}
+
+//Main.java
+class Main {
+  public static void main(String[] args) {
+    new MyThread().start();
+  }
+}
+```
+
+```java
+//MyRunnable.java
+class MyRunnable extends Runnable {
+
+  public MyRunnable() {}
+
+  public void run() {
+    //Do things on thread
+  }
+}
+
+//Main.java
+class Main {
+  public static void main(String[] args) {
+    new Thread(new MyRunnable()).start();
+  }
+}
+```
+
+Alternatively, these classes may be anonymous:
+
+```java
+//Main.java
+class Main {
+  public static void main(String[] args) {
+    new Thread(new Runnable() {
+      //Do stuff on thread
+    }).start();
+  }
+}
+```
+
+### Swift
 
 ## Memory management
 
