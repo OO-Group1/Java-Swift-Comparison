@@ -177,7 +177,56 @@ Since a class can be used almost exactly like either of these types, Apple advis
 
 ## Errors and exception handling
 
-Jacob
+### Java
+
+Java errors / exceptions are sublcasses of a generic class called `Throwable` which represents any issue an app has. `Error` is used to, "indicate problems that a reasonable application would not try to catch. Most such errors are abnormal conditions." Usually this means the application entered into an unrecoverable state.
+
+Most of the time Java programmers don't consider those and instead work with `Exceptions` (and the subclasses thereof). Java's Exception API is very extensible; here are some examples:
+
+```java
+try {
+  //The constructor may throw (cause) a FileNotFoundException
+  FileInputStream in = new FileInputStream("input.txt");
+
+} catch (FileNotFoundException e) {
+  //handle exception. ex) print stack trace to the log
+  e.printStackTracke();
+}
+```
+
+Somewhere in the FileInputStream constructor, there is an operation which may cause a FileNotFoundException. The constructor is defined with `throws FileNotFoundException` after the parameters.
+
+```java
+class FileInputStream {
+
+  public FileInputStream(String name) throws FileNotFoundException {
+    //Open input stream
+  }
+  
+  //...
+}
+```
+
+Methods may throw multiple types of Exceptions and it is also possible to catch multiple types of exceptions. ex)
+
+```java
+try {
+  //The constructor may throw (cause) a FileNotFoundException
+  FileInputStream in = new FileInputStream("input.txt");
+
+} catch (FileNotFoundException e) {
+  //Called if file is not found... Do A.
+
+} catch (NullPointerException e) {
+  //Called if filename is provided is null... Do B.
+}
+```
+
+Normally you wouldn't catch a NullPointerException, but for the sake of example.
+
+### Swift
+
+
 
 
 ## Lambda expressions, closures, functions as types
