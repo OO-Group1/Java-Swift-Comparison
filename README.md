@@ -221,14 +221,10 @@ Trenton
 
 ## Reflection
 
-### Java
+[Reflection](reflection.md)
 
-
-
-### Swift
-
-
-
+* [Java](reflection.md#java-interfaces)
+* [Swift](reflection.md#swift-protocols)
 
 # Other
 
