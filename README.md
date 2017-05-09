@@ -416,4 +416,4 @@ dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
 
 ## Memory management
 
-[Memory Managment](memory_managment.md)
+[Memory Managment](memory_management.md)
