@@ -171,7 +171,9 @@ Since a class can be used almost exactly like either of these types, Apple advis
 
 ## Null/nil references
 
-Trenton
+* Java uses null  
+* Swift uses nil
+
 
 ## Errors and exception handling
 
@@ -190,10 +192,7 @@ Trenton
 
 ## General
 
-David
-
 [General Compairson of Classes in Java and Swift](Classes.md)
-
 
 ## Instance reference
 
@@ -201,13 +200,13 @@ Trenton
 
 ## Properties
 
-David
 [Properties](properties.md)
-
 
 ## Interfaces / Protocols
 
-David
+[Interfaces and Protocols](interfaces_and_protocols.md)
+    * [Java](interfaces_and_protocols.md#java-interfaces)
+    * [Swift](interfaces_and_protocols.md#swift-protocols)
 
 ## Inheritance / Extension
 
@@ -228,8 +227,10 @@ Trenton
 
 ## Singletons
 
-David
-
+[Singletons](singleton.md)
+    * [Java](singleton.md#java)
+    * [Swift](singleton.md#swift)
+    
 ## Multithreading
 
 Jacob
