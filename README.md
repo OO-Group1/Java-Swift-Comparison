@@ -161,70 +161,12 @@ Users of this struct can then refer to `Red` globally by `Colors.Red`, rather th
 * [Java](types.md#java-data-types)
 * [Swift](types.md#swift-data-types)
 
-## References vs values
+## References vs. values
 
-### Java
+[References vs. Values](RefVsValue.md)
 
-Historically, the question of "pass-by-reference" or "pass-by-value" has caused much confused to Java developers. The reason is that Java is is always **pass-by-value**, but the values it passes may be references if the thing being passed is an object. When calling a method or instantiating a variable, it is always the value that is copied. For object, the value copied is the reference address underneath the hood.
-
-So, if you can wrap your head around that, understand that primatives are values and objects are references, but method calls are pass-by-value. As a result, the `==` operator is use for determining equality of the value. This works fine for primitives, but for objects then the operator is comparing the address underneath the hood, which may not be what you expect. To handle equality at a higher level, each Java Object has a function called `equals()` which can be overridden to change how equality works. By default it acts like the `==` operator. `String` is a great example of how this works:
-
-```java
-String a = "hey";
-String b = "hey";
-
-if (a == b) {
-  System.out.println("Equal");
-} else {
-  System.out.println("Not equal");
-}
-```
-
-This would print "Not equal" to the log because two different string objects are created in memroy and we are comparing the references.
-
-```java
-if (a.equals(b)) {
-  System.out.println("Equal");
-} else {
-  System.out.println("Not equal");
-}
-```
-
-This would print "Equal" because it calls `Strings` implementation of the `equals()` method which compares the characters of the two strings to determine equality.
-
-### Swift
-
-Like Java, Swift has both value and reference types and references refer to objects (class instatiations). However, Swift's value types are not primitives: they can be either struct, enum or tuple (programmers do not have access to primitives in swift, only their classes). These data types are intended for plain, simple sets of data as they are copied for each method call which can become expensive if not monitored. 
-
-Since a class can be used almost exactly like either of these types, Apple advises considering carefully which method to use. Value types allow you to more easily reason about your code and provide safety from unwanted mutation to data, but they can come at a cost. References are usually much more efficient, but they can lead to bugs if not paid attention to.
-
-To compare values/references in swift, the `==` operator is used. Unlike Java, this operator can be overriden which means that `==` can be used to compare values rather than references.
-
-```swift
-let a = "hey"
-let b = "hey"
-
-if a == b {
-  print("Equal")
-} else {
-  print("Not equal")
-}
-```
-
-While the corresponding operation printed "Not equal" in Java, this actually prints "Equal" in Swift because the operator is overloaded for the `String` class. If you were interested in comparing the actual object references, Swift gives you the `===` and `!==` operators. Don't fear, this isn't JavaScript. It is just an explicit way to state you are comparing the references to see if the objects are the same instance. The people who created Swift wanted it to act how you expect it to rather than surprise you. The following example will print "Not equal" to the log:
-
-```swift
-let a = "hey"
-let b = "hey"
-
-if a === b {
-  print("Equal")
-} else {
-  print("Not equal")
-}
-```
-
-
+* [Java](RefVsValue.md#java)
+* [Swift](RefVsValue.md#swift)
 
 ## Null/nil references
 
@@ -235,104 +177,10 @@ if a === b {
 
 ## Errors and exception handling
 
-### Java
+[Errors and Exception Handling](errors_and_exceptions.md)
 
-Java errors / exceptions are sublcasses of a generic class called `Throwable` which represents any issue an app has. `Error` is used to, "indicate problems that a reasonable application would not try to catch. Most such errors are abnormal conditions." Usually this means the application entered into an unrecoverable state.
-
-Most of the time Java programmers don't consider those and instead work with `Exceptions` (and the subclasses thereof). Java's Exception API is very extensible; here are some examples:
-
-```java
-try {
-  //The constructor may throw (cause) a FileNotFoundException
-  FileInputStream in = new FileInputStream("input.txt");
-
-} catch (FileNotFoundException e) {
-  //handle exception. ex) print stack trace to the log
-  e.printStackTracke();
-}
-```
-
-Somewhere in the FileInputStream constructor, there is an operation which may cause a FileNotFoundException. The constructor is defined with `throws FileNotFoundException` after the parameters.
-
-```java
-class FileInputStream {
-
-  public FileInputStream(String name) throws FileNotFoundException {
-    //Open input stream
-  }
-  
-  //...
-}
-```
-
-Methods may throw multiple types of Exceptions and it is also possible to catch multiple types of exceptions. ex)
-
-```java
-try {
-  //The constructor may throw (cause) a FileNotFoundException
-  FileInputStream in = new FileInputStream("input.txt");
-
-} catch (FileNotFoundException e) {
-  //Called if file is not found... Do A.
-
-} catch (NullPointerException e) {
-  //Called if filename is provided is null... Do B.
-}
-```
-
-
-FileInputStream documentation says that NullPointerException may be thrown, but one doesn't normally catch it because it is a type of `RuntimeException`. RuntimeExceptions are similar to `Errors` in that you don't want to catch them (usually), but while `Errors` represent an unrecoverable state, `RuntimeExceptions` represent a recoverable one.
-
-### Swift
-
-Swift implements what they call do-catch blocks in a similar fashion to Java's try-catches visually, but with some notable differences. They also have try? and try! statements which are essentially shortcut oneliners for handling the errors. 
-
-Errors in Swift are referred to as `Errors`, not `Exceptions`, and `Errors` are enumerations with cases representing differnet types of related errors rather than being subclasses of some generic `Error` class.
-
-```swift
-enum VendingMachineError: Error {
-    case invalidSelection
-    case insufficientFunds(coinsNeeded: Int)
-}
-```
-
-In each enum case, you may define custom parameters that are passed back to the caller in the form of closures. 
-
-To mark a functions as one that throws an exception(s), you must add `throws` to the end like in Java, but the types of exceptions thrown are inferred based on the code within rather than stated by the programmer.
-
-```swift
-class VendingMachine {
-  func vend(itenName: String) throws {
-    throw VendingMachineError.invalidSelection
-  }
-}
-```
-
-At some level, each case of the Error enumeration *must* be handled, but a single do-catch block need not handle each so long as an enclosing do-catch block does or the function it resides in throws.
-
-```swift
-var vendingMachine = VendingMachine()
-do {
-    try vendingMachine.vend(itemName: "ChocolateBar")
-
-} catch VendingMachineError.invalidSelection {
-    //Do A
-}
-```
-
-Here we catch each of the `VendingMachineErrors` that are thrown by `VendingMachine#vend()`. The shorthand I spoke of before can be implemented like this:
-
-```swift
-let x = try? vendingMachine.vend(itemName: "ChocolateBar")
-x?.blah()
-```
-
-If the function does throw, then the value of x will be nil, and not nil otherwise. If you are sure that your function call will not throw even though it is marked as throws, you may use `try!` to disable error propogation. This gives you and non-optional data type to work with, but will throw a runtime error if an error does in fact occur.
-
-```swift
-let y = try! venchindMachine.vend(itemName: "ChocolateBar")
-y.blah()
-```
+* [Java](errors_and_exceptions.md#java)
+* [Swift](errors_and_exceptions.md#swift)
 
 ## Lambda expressions, closures, functions as types
 
@@ -386,7 +234,7 @@ Trenton
 
 ## Listeners and event handlers
 
-Trenton
+[Listeners and event handlers](event_handling.md)
 
 ## Singletons
 
@@ -397,81 +245,11 @@ Trenton
     
 ## Multithreading
 
-### Java
+[Multithreading](multithreading.md)
 
-Platforms based on Java may have different, higher level implementations for Threads, but at the most basic level Threads in Java are based off the `Thread` class. One must either:
-
-1. Make a subclass of `Thread` and override the `run()` method, then instantiate the subclass and call `start()` on it OR
-
-2. Make a subclass of `Runnable` and override its `run()` method, then pass this to the default `Thread` constructor and call `start()` on it.
-
-The main difference between the two is that `Thread` is a class and has access to state data about the thread, while `Runnable` is an interface making the `Thread` state data essentially private.
-
-```java
-//MyThread.java
-class MyThread extends Thread {
-
-  public MyThread() {}
-
-  public void run() {
-    //Do things on thread
-  }
-}
-
-//Main.java
-class Main {
-  public static void main(String[] args) {
-    new MyThread().start();
-  }
-}
-```
-
-```java
-//MyRunnable.java
-class MyRunnable extends Runnable {
-
-  public MyRunnable() {}
-
-  public void run() {
-    //Do things on thread
-  }
-}
-
-//Main.java
-class Main {
-  public static void main(String[] args) {
-    new Thread(new MyRunnable()).start();
-  }
-}
-```
-
-Alternatively, these classes may be anonymous:
-
-```java
-//Main.java
-class Main {
-  public static void main(String[] args) {
-    new Thread(new Runnable() {
-      //Do stuff on thread
-    }).start();
-  }
-}
-```
-
-### Swift
-
-Swift has a very different implentation of multithreading compared to Java. It relies on what is called a "Grand Central Dispacth" which is in charge of thread lifecycle (e.g. creating and starting threads). One must only call `dispatch_async()` with some queue and closure where the thread will run. Getting the queue to dispatch to is as easy as calling another method. To get the global queue (not main thread), call `dispatch_get_global_queue(priority, flags)`. To get the main queue, call `dispatch_get_main_queue()`. Ex)
-
-```swift
-dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
-	//Do async things on thread
-
-	dispatch_async(dispatch_get_main_queue(), {
-		//Handle result on main thread
-	}
-}
-```
+* [Java](multithreading.md#java)
+* [Swift](multithreading.md#swift)
 
 ## Memory management
 
-Trenton
+[Memory Managment](memory_management.md)
