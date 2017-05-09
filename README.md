@@ -174,9 +174,10 @@ Since a class can be used almost exactly like either of these types, Apple advis
 
 ## Null/nil references
 
-* Java uses null  
-* Swift uses nil
+[Null or nil?](null_nil.md)
 
+* [Java](null_nil.md#Java-Null/Nil-references) 
+* [Swift](null_nil.md#Swift-Null/Nil-references)
 
 ## Errors and exception handling
 
