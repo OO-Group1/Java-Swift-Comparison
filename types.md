@@ -1,5 +1,7 @@
 # Data Types
 
+* [Java](#java-data-types)
+* [Swift](#swift-data-types)
 
 ## Java Data Types
 
@@ -21,3 +23,7 @@ func myFunction(num: Int) { /* implementation */ }
 * Types in Swift all fall into one of two other categories: Value types and Reference types.
 * Instances that keep a unique copy of their data are value types.
 * Instances sharing a single copy of data are called reference types.
+
+
+
+[Back to Table of Contents](README.md)

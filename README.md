@@ -152,7 +152,10 @@ Users of this struct can then refer to `Red` globally by `Colors.Red`, rather th
 
 ## Types
 
-Trenton
+[Types](types.md)
+
+* [Java](types.md#java-data-types)
+* [Swift](types.md#swift-data-types)
 
 ## References vs values
 
@@ -177,12 +180,12 @@ Since a class can be used almost exactly like either of these types, Apple advis
 
 ## Errors and exception handling
 
-Jacob
+[Jacob]
 
 
 ## Lambda expressions, closures, functions as types
 
-Trenton
+[Lambda Expressions / Closures](lambda.md)
 
 
 
@@ -215,7 +218,7 @@ Trenton
 
 ## Inheritance / Extension
 
-Trenton
+[Inheritance / Extension](inheritance.md)
 
 ## Reflection
 
