@@ -1,5 +1,7 @@
 # Data Types
 
+* [Java](#java-data-types)
+* [Swift](#swift-data-types)
 
 ## Java Data Types
 
