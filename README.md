@@ -202,6 +202,10 @@ Trenton
 
 [Properties](properties.md)
 
+* [Getters & Setters](properties.md#getters--setters)
+* [Backing Variables](properties.md#backing-variables)
+* [Computed Properties](properties.md#computed-properties)
+
 ## Interfaces / Protocols
 
 [Interfaces and Protocols](interfaces_and_protocols.md)
