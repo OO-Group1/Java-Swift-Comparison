@@ -65,7 +65,8 @@ Swift incorporates what many Apple developers felt were the best features of a w
 
 ## Unique Features
 
-Group
+* Swift does not require semicolons at the end of lines.
+* Swift has a "lazy" keyword, to denote objects that should be lazily instantiated
 
 ## Namespaces
 
@@ -77,13 +78,13 @@ Ex) The `String` class lives in the `java.lang` package as a fundamental part of
 
 Multiple classes of the same name can exist so long as they do not reside in the same package. For any class, it's package can be defined like so:
 
-```
+```java
 package com.oo_design;
 ```
 
 To use a class you must import its package or the class itself. By defining a class as part of a package, you implicitly include all the classes that are also in that package.
 
-```
+```java
 import java.io.*;       //All classes in java.io package
 import java.io.File;    //File class from java.io package
 ```
@@ -92,7 +93,7 @@ Modern IDEs should automatically add the imports for you on the fly if they are 
 
 Ex) If I have already imported java.io.File, I must either remove that import line and replace it with mine to just reference `File` in code, or do it like this:
 
-```
+```java
 com.oo_design.File file = new File("my_file.txt");
 ```
 
@@ -100,7 +101,7 @@ com.oo_design.File file = new File("my_file.txt");
 
 In Swift, each file or class you create, unless otherwise specified, is available throughout your entire application without the need for importing. Code that comes from other sources is based on a concept called "modules". A module can be either a framework or an application and is considered to be "a single unit of code distribution." To use code from another module, one must use the `import` keyword, which is used to import code from an entire module. Ex)
 
-```
+```swift
 import Alamofire
 ```
 
@@ -109,7 +110,7 @@ import Alamofire
 
 Given this there has been much debate over how to best make global constants. Since there are no namespaces in the usual sense within a module, a constant in one place could conflict with a constant in another if named the same. One such way is to leverage Swift's power of extension with enumerations:
 
-```
+```swift
 enum Login { }
 
 extension Login {
@@ -122,7 +123,7 @@ extension Login {
 
 For implementations related to login, we can do:
 
-```
+```swift
 extension Login {
   class LoginViewController {
     //Do stuff
@@ -134,7 +135,7 @@ In here, we can refer to `Login.Data` as simply `Data` since `LoginViewControlle
 
 For constants, others have use uninitializable structs to provide something of a namespace:
 
-```
+```swift
 struct Colors {
   private init() {}
 
